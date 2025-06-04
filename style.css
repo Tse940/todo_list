@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Only To-Do List</title>
+  <style>
+    body {
+      background: #eef2f7;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      padding-top: 50px;
+    }
+
+    .todo-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .todo-item input[type="checkbox"] {
+      display: none;
+    }
+
+    .todo-item label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .todo-item label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #888;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    .todo-item input[type="checkbox"]:checked + label::before {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .todo-item input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color:
